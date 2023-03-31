@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import axios from "axios";
 import dayjs from "dayjs";
 import chalk from 'chalk';
