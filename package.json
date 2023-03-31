@@ -10,13 +10,16 @@
   },
   "bin": {
     "terminal-gpt-add-key": "/addConfig.js",
-    "terminal-gpt": "/script.js"
+    "terminal-gpt": "/script.js",
+    "terminal-gpt-check-usage": "/checkUsage.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bijish O B",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.3.4",
     "chalk": "^5.2.0",
+    "dayjs": "^1.11.7",
     "dotenv": "^16.0.3",
     "openai": "^3.2.1"
   }

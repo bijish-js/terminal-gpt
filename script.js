@@ -6,7 +6,7 @@ import readline from "readline"
 import chalk from 'chalk';
 
 import jsonConfig from './config.json' assert { type: "json" };
-
+import { highlight } from "./highlight.js"
 const { log } = console
 
 config()
@@ -48,7 +48,7 @@ const askGPT = async (inputText) => {
         })
         // an object inside choice contains message:{role,content},finish_reason,index
         stopLoadingAnimation(loadingInterval);
-        log(chalk.hex(appConfig.answer)(response?.data?.choices[0]?.message?.content))
+        highlight(response?.data?.choices[0]?.message?.content)
 
 
     }
@@ -70,7 +70,7 @@ function startLoadingAnimation() {
     }, 200);
 }
 
-function stopLoadingAnimation(loadingInterval, completeText = "Loading complete!") {
+function stopLoadingAnimation(loadingInterval, completeText = " ") {
     clearInterval(loadingInterval);
     readline.cursorTo(process.stdout, 0);
     process.stdout.write(completeText);
