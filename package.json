@@ -17,7 +17,18 @@
     "terminal-gpt": "/script.js",
     "terminal-gpt-check-usage": "/checkUsage.js"
   },
-  "keywords": [],
+  "keywords": [
+    "gpt-3",
+    "openai",
+    "terminal",
+    "chat",
+    "command-line",
+    "cli",
+    "language-model",
+    "api-key-management",
+    "api-usage-monitoring",
+    "nodejs"
+  ],
   "author": "Bijish O B",
   "license": "ISC",
   "dependencies": {
