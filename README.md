@@ -15,13 +15,13 @@ Additionally, GPT-in-Terminal provides a convenient way to monitor API key usage
 
 To use GPT-in-Terminal, follow these steps:
 
-`1` Install [Node.js](https://nodejs.org/en/download) on your local machine.  
+`1`. Install [Node.js](https://nodejs.org/en/download) on your local machine.  
 
-`2` Install GPT-in-Terminal globally 
+`2`. Install GPT-in-Terminal globally 
 ```bash
 npm install -g gpt-in-terminal
 ```
-`3` Add your OpenAI API key to the GPT-in-Terminal configuration file. This will add your API key to the `config.json` file located in the GPT-in-Terminal installation directory.
+`3`. Add your OpenAI API key to the GPT-in-Terminal configuration file. This will add your API key to the `config.json` file located in the GPT-in-Terminal installation directory.
 ```bash
 terminal-gpt-add-key your_api_key_here
 ```
@@ -30,7 +30,7 @@ For example, if  API key is  `SN-uelksry743swfr875ty758jsr`, it should be given 
 terminal-gpt-add-key SN-uelksry743swfr875ty758jsr
 ```
   
-`4` Run the command to start a chat session with GPT-3.
+`4`. Run the command to start a chat session with GPT-3.
 ```bash 
 terminal-gpt
 ```
