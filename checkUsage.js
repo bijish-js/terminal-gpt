@@ -3,14 +3,21 @@
 import axios from "axios";
 import dayjs from "dayjs";
 import chalk from 'chalk';
-import jsonConfig from './config.json' assert { type: "json" };
+import fs from 'fs/promises';
 
+async function readJsonFile(filePath) {
+    const data = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(data);
+}
+
+const jsonConfig = await readJsonFile('./config.json');
 const API_KEY = jsonConfig.API_KEY;
 
 if (!API_KEY) {
     log(chalk.hex("#EE4040").bold("API_KEY not present."))
     process.exit();
 }
+
 
 function isValidDate(dateString) {
     const dateFormat = "YYYY-MM-DD";

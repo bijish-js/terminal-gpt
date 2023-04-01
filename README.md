@@ -1,31 +1,53 @@
-## Getting Started
+# GPT in Terminal 👾
+
+GPT-in-Terminal is a versatile and user-friendly command-line tool built with Node.js that allows developers to interact seamlessly with OpenAI's powerful GPT-3 language model. 
+
+After obtaining an API key from the __OpenAI dashboard__, users can easily set it up within the tool and start leveraging its features. By installing GPT-in-Terminal globally, users can access its functionalities directly from their terminal, provided they have Node.js installed. 
+
+The tool offers interactive chat sessions with GPT-3, complete with __colorful__ highlights for chats, prompts, code sections, and important terms for enhanced readability. 
+
+Additionally, GPT-in-Terminal provides a convenient way to monitor API key usage in terms of monetary cost within specified date ranges. This comprehensive solution simplifies the process of working with the GPT-3 language model directly from the terminal.
+
+
+![GPT in terminal screenshot](https://i.ibb.co/ByLWBp9/Screenshot-2023-04-01-at-6-14-28-PM.png)
+
+## Getting Started 🎬
 
 To use GPT-in-Terminal, follow these steps:
 
-1. Install Node.js on your local machine.
-2. Install GPT-in-Terminal globally by running 
-`npm install -g gpt-in-terminal`.
-3. Add your OpenAI API key to the GPT-in-Terminal configuration file by running 
-`terminal-gpt-add-key your_api_key_here`. 
-This will add your API key to the `config.json` file located in the GPT-in-Terminal installation directory.
-4. Run the command `terminal-gpt` to start a chat session with GPT-3.
+1️⃣ Install [Node.js](https://nodejs.org/en/download) on your local machine.  
 
-## Usage
+2️⃣ Install GPT-in-Terminal globally 
+```bash
+npm install -g gpt-in-terminal
+```
+3️⃣ Add your OpenAI API key to the GPT-in-Terminal configuration file. This will add your API key to the `config.json` file located in the GPT-in-Terminal installation directory.
+```bash
+terminal-gpt-add-key your_api_key_here
+```
+For example, if  API key is  `SN-uelksry743swfr875ty758jsr`, it should be given as:
+```bash
+terminal-gpt-add-key SN-uelksry743swfr875ty758jsr
+```
+  
+4️⃣ Run the command to start a chat session with GPT-3.
+```bash 
+terminal-gpt
+```
+ 
 
-To start a chat session with GPT-3, simply open a terminal and type `terminal-gpt`. The program will prompt you for input and generate a response based on GPT-3's language model.
-
-## Adding Your API Key
-
-To add your OpenAI API key to the configuration file, run the command `terminal-gpt-add-key your_api_key_here`. This will add your API key to the `config.json` file located in the GPT-in-Terminal installation directory.
-
-**Note:** You must have write permissions to the `config.json` file to add your API key.
-
-## Check API Key Usage
+### API Key Usage 🔑
 
 To check the usage of your API key between a specific date range, run the following command:
-`terminal-gpt-check-usage <start_date> <end_date>`
+```bash
+terminal-gpt-check-usage start_date_here end_date_here
+```
+Replace `start_date_here` and `end_date_here` with dates in the format `yyyy-mm-dd`. For example:
+```bash
+terminal-gpt-check-usage "2023-01-01" "2023-01-31"
+```
+The above command will display the usage details of your API key between January 1st, 2023 and January 31st, 2023.
 
-Replace `<start_date>` and `<end_date>` with dates in the format "yyyy-mm-dd". For example:
-`terminal-gpt-check-usage "2023-01-01" "2023-01-31"`
-This command will display the usage details of your API key between January 1st, 2023 and January 31st, 2023.
-
+##  Links 🔗
+- [Author](https://www.bijishob.com)
+- [Repository](https://github.com/bijish-js/terminal-gpt)

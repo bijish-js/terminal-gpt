@@ -4,8 +4,8 @@ import { config } from "dotenv"
 import { Configuration, OpenAIApi } from "openai"
 import readline from "readline"
 import chalk from 'chalk';
+import fs from 'fs/promises';
 
-import jsonConfig from './config.json' assert { type: "json" };
 import { highlight } from "./highlight.js"
 const { log } = console
 
@@ -19,19 +19,23 @@ const appConfig = {
     error: "#EE4040"
 }
 
+
+async function readJsonFile(filePath) {
+    const data = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(data);
+}
+
+const jsonConfig = await readJsonFile('./config.json');
 const API_KEY = jsonConfig.API_KEY;
 
 if (!API_KEY) {
-    log(chalk.hex(appConfig.error).bold("API_KEY not present."))
+    log(chalk.hex("#EE4040").bold("API_KEY not present."))
     process.exit();
 }
 
 const openai = new OpenAIApi(new Configuration({
     apiKey: API_KEY
 }))
-
-
-
 
 const userInterface = readline.createInterface({
     input: process.stdin,
