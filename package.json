@@ -1,6 +1,6 @@
 {
   "name": "gpt-in-terminal",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Access chat-GPT in your terminal with the power of nodejs.",
   "main": "index.js",
   "type": "module",
